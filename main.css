@@ -1,0 +1,153 @@
+@import url("reset.css");
+
+:root {
+	--blue-main:  rgb(38, 77, 196);
+	--opaque: rgba(0, 0, 0, 0.5);
+	--white-main: rgba(255, 253, 247, 0.883);
+	--orange-main: rgb(255, 158, 129);
+	--font-body: monospace;
+}
+
+html {
+	font-family: monospace;
+	font-size: 18px;
+	background-color: var(--white-main);
+	background: 
+		linear-gradient(rgb(38, 77, 196), rgb(22, 53, 113));
+	background-attachment: fixed;
+	color: var(--white-main);
+	text-transform: uppercase;
+	text-shadow: 0 1px 2px rgb(0, 3, 45);
+	letter-spacing: 1px;
+}
+
+.flex-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.normalcase {
+	text-transform: none;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+h1, h2, h3 {
+	margin-block: 1rem;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+h4, h5, h6 {
+	margin-block: 1rem;
+}
+
+footer a[href] {
+	text-decoration: none;
+}
+
+.orange {
+	color: var(--orange-main);
+}
+
+.menu-area a[href] {
+	padding: .5rem .75rem;
+	text-decoration: none;
+	color: var(--orange-main);
+}
+
+.menu-area a[href]:hover {
+	color: var(--white-main);
+}
+
+.wrapper {
+	width: min(95ch, 100%);
+	margin-inline: auto;
+	margin-block: 1dvh 2dvh;
+	padding: 2rem;
+}
+
+.site-header {
+}
+
+.site-logo.bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: .25;
+	z-index: -99;
+}
+
+.meanu-area {
+	padding: 0;
+}
+
+.slashes {
+	letter-spacing: 5px;
+}
+
+.content-area {
+	min-height: 25dvh;
+}
+
+.opener {
+	margin-block: 0 8dvh;
+	animation: colorchange 5s infinite alternate;
+}
+
+@keyframes colorchange {
+	from { color: #fff; }
+	to{ color: rgb(249, 255, 0);}
+}
+
+.latest header {
+	font-size: 1.25rem;	
+	margin-block: 1rem;
+}
+
+.release {
+	margin-block: 2rem;
+	color: var(--white-main);
+}
+
+.release.flex-row {
+	align-items: flex-start;
+}
+
+.release-info {
+	width: 33%;
+	flex-shrink: 1;
+}
+
+.release-info ol {
+	padding-left: 0;
+	margin-left: 1rem;
+	font-size: 14px;
+}
+
+.cover {
+	width: 66%;
+	flex-shrink: 3;
+}
+.cover img {
+	filter: grayscale(100%);
+}
+.release-title {
+	color: var(--orange-main);
+}
+
+.site-footer {
+	display: none;
+	text-align: right;
+	margin-block: 10dvh;
+	font-size: 14px;
+}
