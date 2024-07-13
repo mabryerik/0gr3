@@ -1,0 +1,31 @@
+@media screen and (max-width: 600px) {
+
+.release.flex-row {
+	flex-flow: column-reverse;
+}
+
+.cover, .release-info {
+	width: 100%!important;
+}
+
+.release-info {
+	padding-top: 1rem;
+}
+
+.release-info h4 {
+	text-align: center;
+}
+
+.tracklist {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.side-a ol,
+.side-b ol {
+	margin-left: 2rem!important;
+}
+
+}

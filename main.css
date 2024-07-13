@@ -1,4 +1,6 @@
 @import url("reset.css");
+@import url("mobile.css");
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=VT323&display=swap');
 
 :root {
 	--blue-main:  rgb(38, 77, 196);
@@ -9,8 +11,7 @@
 }
 
 html {
-	font-family: monospace;
-	font-size: 18px;
+  	font-family: "Syne Mono", monospace;
 	background-color: var(--white-main);
 	background: 
 		linear-gradient(rgb(38, 77, 196), rgb(22, 53, 113));
@@ -21,11 +22,20 @@ html {
 	letter-spacing: 1px;
 }
 
+body {
+	font-size: 20px;
+}
+
+p, ol, li {
+	font-size: 1.25rem;
+}
+
 .flex-row {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
+	gap: 10px;
 }
 
 .center {
@@ -41,13 +51,17 @@ html {
 }
 
 h1, h2, h3 {
+	font-family: "VT323", monospace;
 	margin-block: 1rem;
-	font-size: 1rem;
+	font-size: 3rem;
 	font-weight: normal;
 }
 
 h4, h5, h6 {
+	font-family: "VT323", monospace;
 	margin-block: 1rem;
+	font-size: 2rem;
+	letter-spacing: 0;
 }
 
 footer a[href] {
@@ -69,7 +83,7 @@ footer a[href] {
 }
 
 .wrapper {
-	width: min(95ch, 100%);
+	width: min(75ch, 100%);
 	margin-inline: auto;
 	margin-block: 1dvh 2dvh;
 	padding: 2rem;
@@ -102,6 +116,7 @@ footer a[href] {
 .opener {
 	margin-block: 0 8dvh;
 	animation: colorchange 5s infinite alternate;
+	font-size: 30px;
 }
 
 @keyframes colorchange {
@@ -124,8 +139,7 @@ footer a[href] {
 }
 
 .release-info {
-	width: 33%;
-	flex-shrink: 1;
+	width: calc(50% - 10px);
 }
 
 .release-info ol {
@@ -135,8 +149,7 @@ footer a[href] {
 }
 
 .cover {
-	width: 66%;
-	flex-shrink: 3;
+	width: calc(50% - 10px);
 }
 .cover img {
 	filter: grayscale(100%);
